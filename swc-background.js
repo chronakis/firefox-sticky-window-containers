@@ -16,9 +16,10 @@ const openInDifferentContainer = function(cookieStoreId, tab, urlOverride) {
     index: tab.index + 1,
     openerTabId: tab.openerTabId
   };
-
-  if (urlOverride || !blankPages.has(tab.url)) {
-    tabProperties.url = urlOverride || tab.url;
+  
+  const url = urlOverride || tab.url;
+  if (!blankPages.has(url)) {
+    tabProperties.url = url;
   }
 
   console.debug('openInDifferentContainer', tabProperties);
