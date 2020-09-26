@@ -51,6 +51,7 @@ const isPrivilegedURL = function(url) {
   return url == 'about:config' ||
     url == 'about:debugging' ||
     url == 'about:addons' ||
+    url == 'about:preferences' ||
     url.startsWith('chrome:') ||
     url.startsWith('javascript:') ||
     url.startsWith('data:') ||
