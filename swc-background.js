@@ -57,6 +57,8 @@ const isPrivilegedURL = function(url) {
     url.startsWith('javascript:') ||
     url.startsWith('data:') ||
     url.startsWith('file:') ||
+    url.startsWith('moz-extension:') ||
+    url.startsWith('about:logins') ||
     url.startsWith('about:preferences') ||
     url.startsWith('about:config');
 }
